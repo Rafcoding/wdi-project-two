@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
 const sneakerSchema = mongoose.Schema({
-  name: String,
-  price: Number
+  
+  model: String,
+  price: Number,
+  image: String
 });
 
 const sneakerModel = mongoose.model('Sneaker', sneakerSchema);
