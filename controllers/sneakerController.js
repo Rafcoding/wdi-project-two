@@ -43,11 +43,16 @@ function sneakersUpdate(req, res) {
     .then(sneaker => res.redirect(`/sneakers/${sneaker._id}`));
 }
 
+function sneakerDelete(req, res) {
+  Sneaker.findByIdAndDelete(req.params.id)
+    .then(() => res.redirect('/sneakers'));
+}
 module.exports = {
   index: sneakersIndex,
   show: sneakersShow,
   new: sneakersNew,
   create: sneakersCreate,
   edit: sneakersEdit,
-  update: sneakersUpdate
+  update: sneakersUpdate,
+  delete: sneakerDelete
 };
