@@ -1,0 +1,4 @@
+<h1>The Sneakers index</h1>
+<% sneakers.forEach(sneaker => { %>
+  <p><a href="/sneakers/<%= sneaker._id %>"><%= sneaker.name %> (£ <%= sneaker.price %>)</a></p>
+<% }) %>
