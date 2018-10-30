@@ -2,30 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <link rel="stylesheet" href="/css/style.css">
-      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css"> -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <meta charset="utf-8">
     <title>Sneaker Freaker</title>
   </head>
   <body>
-    <header class="">
-        <h1 class="">Sneaker Freaker</h1>
-        <p>Only the World's hottest Brands, for sneaker lovers!</p>
-        <nav>
-          <ul class="">
-            <li class=""> <a href="/about">About</a></li>
-            <li class=""> <a href="/">Home</a></li>
-            <li class=""><a href="/sneakers">Index</a></li>
-            <li class=""> <a href="/sneakers">Sneakers</a></li>
-            <% if (locals.isLoggedIn) { %>
-            <li class=""><a href="/logout">Log out <%= locals.currentUser.username.toUpperCase() %></a></li>
-          <% } else { %>
-            <li class=""><a href="/login">Log in</a></li>
-            <li class=""><a href="/register">Sign up</a></li>
-          <% } %>
-          </ul>
-        </nav>
-      </header>
+
     <%- body %>
-    <footer>Made by Rafa</footer>
+
   </body>
 </html>

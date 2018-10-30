@@ -1,10 +1,21 @@
 * {
 
 
-  background-color: lightblue;
+  background-color: white;
 }
-img {
+/* img {
   border-radius: 100px;
 width: 300px;
 height: 300px;
+} */
+body {
+  margin: 0;
+  background-color: white;
 }
+/* .container {
+  margin: 0;
+}
+
+.footercontainer {
+  margin: 0;
+} */

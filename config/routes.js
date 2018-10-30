@@ -4,7 +4,7 @@ const commentsController = require('../controllers/commentsController');
 const authController = require('../controllers/authController');
 
 router.get('/', function(req, res) {
-  res.send('Welcome to Sneaker Freaker');
+  res.render('home');
 });
 
 router.get('/sneakers', sneakerController.index);

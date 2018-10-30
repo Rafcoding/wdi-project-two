@@ -1,18 +1,20 @@
 const User = require('../models/user');
 
-function registerFormRoute(req, res) {
-  // Send the user a registration form
+function registerFormRoute(req, res, next) {
   res.render('auth/register');
+  next();
 }
 
-function registerRoute(req, res) {
-  // Create a new user
-  // req.body contains the data from the registration form
-  User.create(req.body)
-    .then(result => {
-      console.log('User created', result);
-      // Redirect to the home page
+function registerRoute(req, res, next) {
+  User
+    .create(req.body)
+    .then(user => {
+      console.log('Created a user', user);
       res.redirect('/');
+    })
+    .catch(err => {
+      console.log('There was an error', err);
+      next();
     });
 }
 
@@ -20,34 +22,28 @@ function loginFormRoute(req, res) {
   res.render('auth/login');
 }
 
-function loginRoute(req, res) {
-  // req.body has the data from the login form
-  console.log('User is logging in', req.body);
-  // Process the login.
-  // Check for an existing user
-  User.findOne({ email: req.body.email })
-    .then(result => {
-      // Hopefully, result contains a user
-      if (!result) {
-        // If there is no user
-        res.redirect('/login');
+function loginRoute(req, res, next) {
+  User
+    .findOne({ email: req.body.email })
+    .then(user => {
+      if(!user) {
+        res.redirect('/register');
       } else {
-        // We've found a user in the database! Write the user's
-        // ID into their locker (session).
-        // (req.session is the locker)
-        req.session.userId = result._id;
+        console.log('Logging in', user);
+        req.session.userId = user._id;
         res.redirect('/');
       }
+    })
+    .catch(err => {
+      console.log('There was an error', err);
+      next();
     });
-  // Validate the password
-  // Write their id into req.session
-  // Otherwise redirect to login form
 }
 
-function logoutRoute(req, res) {
-  // Clear the data in the current session
+function logoutRoute(req, res, next) {
   req.session.regenerate(function() {
     res.redirect('/');
+    next();
   });
 }
 
