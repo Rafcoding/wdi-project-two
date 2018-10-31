@@ -5,6 +5,7 @@ const sneakerSchema = mongoose.Schema({
   model: String,
   price: Number,
   image: String,
+  description: String,
   comments: [{
     rating: { type: Number, min: 1, max: 10 },
     user: { type: String, required: true },

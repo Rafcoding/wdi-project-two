@@ -14,6 +14,7 @@ function sneakersShow(req, res) {
   // First find the sneaker in the database
   Sneaker.findById(req.params.sneakerId)
     .then(sneaker => {
+      console.log('-=--=-=-=-=> ', sneaker);
       res.render('sneakers/show', sneaker);
     });
 }

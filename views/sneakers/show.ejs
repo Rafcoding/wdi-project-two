@@ -1,3 +1,113 @@
-<h1>The Sneakers show page</h1>
-<%= model %>
-<a href="/sneakers/<%= _id %>/edit">Edit these Sneakers</a>
+
+<div class="hero-head">
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a>
+            <img id="logote" src="/images/Screen Shot 2018-10-30 at 11.39.34.png" href="/" alt="Logo">
+          </a>
+
+          <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroB" class="navbar-menu">
+          <div class="navbar-end">
+
+
+            <a id="orange" class="navbar-item" href="/logout" > Logout <%= locals.currentUser.username.toUpperCase() %>
+          </a>
+          <a id="orange" class="navbar-item" href="/sneakers">
+            Sneakers
+          </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div class="wrapper">
+      <section class="section">
+          <div class="container">
+              <div class="columns is-gapless is-vcentered is-mobile is-multiline">
+
+                  <div class="column is-6-desktop is-full-mobile has-text-centered">
+                      <img src="<%= image %>" alt="<%= model %>">
+                      <% if (locals.isLoggedIn) { %>
+                        <div class="section columns is-mobile">
+                        <div class="column is-one-fifth">
+                        <a class="button is-rounded" href="/sneakers/<%= _id %>/edit">Edit</a>
+                        </div>
+                        <div class="column is-one-fifth">
+                        <form action="/sneakers/<%= id %>?_method=DELETE" method="post">
+                        <button class="button is-danger is-rounded">Delete</button>
+                        </form>
+                        </div>
+                        </div>
+                  </div>
+
+                  <div class="column is-4-desktop is-full-mobile has-text-centered ">
+                    <h2 class="title is-2"><%= model %></h2>
+                    <p>Price: £<%= price %></p>
+                    <p>Description: <%= description %></p>
+                  </div>
+
+              </div>
+          </div>
+      </section>
+
+  </div>
+
+
+<section class="section">
+<div class="columns is-mobile">
+  <div class="column is-half-desktop is-half-tablet is-half-mobile">
+    <% comments.forEach(comment => { %>
+      <div>
+      <span><strong><%= comment.user.toUpperCase() %></strong></span>
+      </div>
+      <div>
+      <span><%= '😎'.repeat(comment.rating) %></span>
+      </div>
+      <div>
+      <span><%= comment.content %></span>
+      </div>
+
+      <span>
+      <form method="POST" action="/sneakers/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
+      <button class="extra"> ✖︎</button>
+      </form>
+      </span>
+    <% }) %>
+
+    </div>
+    <div class="column is-half-desktop is-half-tablet is-half-mobile">
+    <div class="columns">
+    <div class="column is-4 is-offset-4">
+    <h2 class="title is-2">Reviews</h2>
+    <form action='/sneakers/<%= id %>/comments' method="post">
+    <div class="field">
+    <input name='user' value='<%= locals.currentUser.username %>' hidden/>
+    </div>
+    <div class="field">
+    <label for='rating'>Score (1 to 10) </label>
+    </div>
+    <div class="field">
+    <input name='rating' type='Number' min='1' max='10'/>
+    <br />
+    </div>
+
+    <div class="field">
+    <label for='content'>Something to say... </label>
+    <textarea name='content'></textarea>
+    </div>
+    <div class="field">
+    <button>Submit</button>
+    </div>
+    </form>
+    </div>
+    </div>
+  <% } %>
+</section>

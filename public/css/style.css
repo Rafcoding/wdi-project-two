@@ -39,7 +39,7 @@ height: 56px;
 
 section.section {
   padding-top: 0px;
-  padding-bottom: 6rem;
+  padding-bottom: 7.7rem;
 }
 
 #navbar {
@@ -52,11 +52,22 @@ section.section {
   background-color: black;
 } */
 #orange {
-  color: orangered;
+  color: darkorange;
   font-weight: bold;
 }
 p {
   color: black;
   font-size: 16px;
   font-weight: bold;
+}
+#grande {
+  margin-top: 10px;
+font-weight: bold;
+color: black;
+font-size: 20px;
+}
+#logote {
+  height: 45px;
+margin-top: 3px;
+margin-bottom: -4px;
 }

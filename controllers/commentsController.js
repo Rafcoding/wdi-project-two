@@ -1,6 +1,7 @@
 const Sneaker = require('../models/sneaker');
 
 function commentsCreate(req, res) {
+  console.log(req.body);
   Sneaker
     .findById(req.params.id)
     .then(sneaker => {

@@ -31,7 +31,7 @@ function loginRoute(req, res, next) {
       } else {
         console.log('Logging in', user);
         req.session.userId = user._id;
-        res.redirect('/');
+        res.redirect('/sneakers');
       }
     })
     .catch(err => {

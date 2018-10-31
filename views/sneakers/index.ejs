@@ -1,17 +1,43 @@
 
+<div class="hero-head">
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a>
+            <img id="logote" src="/images/Screen Shot 2018-10-30 at 11.39.34.png" href="/" alt="Logo">
+          </a>
 
-<main>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroB" class="navbar-menu">
+          <div class="navbar-end">
 
-  <div class="">
-    <% sneakers.forEach(sneaker => {%>
-      <div>
-      <a href="/sneakers/<%= sneaker.id %>">
 
-      <img width="500px" height="500px" src="<%= sneaker.image %>" />
-      <h3><%= sneaker.model %></h3>
-      <p>£<%= sneaker.price %></p>
-      </a>
+                <a id="orange" class="navbar-item"href="/logout" > Logout <%= locals.currentUser.username.toUpperCase() %></a>
+
+
+
+          </div>
+        </div>
       </div>
-      <% }) %>
+    </nav>
+  </div>
+
+<div id="resize" class="columns is-multiline is-mobile">
+  <% sneakers.forEach(sneaker => {%>
+    <div class="column is-4-desktop is-4-tablet is-6-mobile">
+      <a href="/sneakers/<%= sneaker.id %>">
+        <h3><%= sneaker.model %><p>£<%= sneaker.price %></p></h3>
+      <img width="400px" height="400px" src=<%= sneaker.image %> alt=<%= sneaker.name %> />
+
+      </a>
     </div>
-</main>
+    <% }) %>
+</div>
+<% if (locals.isLoggedIn) { %>
+<a href="/sneakers/new" id="button"class="button is-rounded">Add more Sneakers...</a>
+<% } %>
