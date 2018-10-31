@@ -71,3 +71,35 @@ font-size: 20px;
 margin-top: 3px;
 margin-bottom: -4px;
 }
+#resize {
+  margin-left: 40px;
+margin-top: 40px;
+}
+#justificado {
+  text-align: justify;
+}
+
+#pricy {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#mage {
+  margin-top: 50px;
+  margin-left: 10px;
+}
+
+#mage2 {
+  margin-top: -100px;
+margin-left: 20px;
+}
+/* .button  {
+  color: darkorange;
+font-weight: bold;
+background-color: black;
+} */
+
+#button  {
+  color: darkorange;
+font-weight: bold;
+background-color: black;
+}

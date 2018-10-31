@@ -3,7 +3,7 @@
     <nav id="navbar" class="navbar">
       <div class="container">
         <div class="navbar-brand">
-          <a>
+          <a href="/">
             <img id="logote" src="/images/Screen Shot 2018-10-30 at 11.39.34.png" href="/" alt="Logo">
           </a>
 
@@ -31,9 +31,9 @@
   <% sneakers.forEach(sneaker => {%>
     <div class="column is-4-desktop is-4-tablet is-6-mobile">
       <a href="/sneakers/<%= sneaker.id %>">
-        <h3><%= sneaker.model %><p>£<%= sneaker.price %></p></h3>
-      <img width="400px" height="400px" src=<%= sneaker.image %> alt=<%= sneaker.name %> />
 
+      <img width="400px" height="400px" src=<%= sneaker.image %> alt=<%= sneaker.name %> />
+<h3><%= sneaker.model %><p>£<%= sneaker.price %></p></h3>
       </a>
     </div>
     <% }) %>

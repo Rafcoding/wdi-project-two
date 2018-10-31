@@ -15,13 +15,13 @@
         </div>
         <div id="navbarMenuHeroB" class="navbar-menu">
           <div class="navbar-end">
-
+            <a id="orange" class="navbar-item" href="/sneakers">
+              Sneakers
+            </a>
 
             <a id="orange" class="navbar-item" href="/logout" > Logout <%= locals.currentUser.username.toUpperCase() %>
           </a>
-          <a id="orange" class="navbar-item" href="/sneakers">
-            Sneakers
-          </a>
+
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@
           <div class="container">
               <div class="columns is-gapless is-vcentered is-mobile is-multiline">
 
-                  <div class="column is-6-desktop is-full-mobile has-text-centered">
+                  <div id="mage" class="column is-6-desktop is-full-mobile has-text-centered">
                       <img src="<%= image %>" alt="<%= model %>">
                       <% if (locals.isLoggedIn) { %>
                         <div class="section columns is-mobile">
@@ -42,16 +42,16 @@
                         </div>
                         <div class="column is-one-fifth">
                         <form action="/sneakers/<%= id %>?_method=DELETE" method="post">
-                        <button class="button is-danger is-rounded">Delete</button>
+                        <button class="button is-rounded">Delete</button>
                         </form>
                         </div>
                         </div>
                   </div>
 
-                  <div class="column is-4-desktop is-full-mobile has-text-centered ">
+                  <div id="mage2" class="column is-4-desktop is-full-mobile has-text-centered ">
                     <h2 class="title is-2"><%= model %></h2>
-                    <p>Price: £<%= price %></p>
-                    <p>Description: <%= description %></p>
+                    <p id="pricy">Price: £<%= price %></p>
+                    <p id="justificado">Description: <%= description %></p>
                   </div>
 
               </div>
