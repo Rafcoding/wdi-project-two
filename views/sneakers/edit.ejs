@@ -1,7 +1,77 @@
-<h1>Edit your Sneakers</h1>
-<form class="" action="/sneakers/<%= _id %>?_method=PUT" method="post">
-  <input type="text" name="model" value="<%= model %>">
-  <input type="number" name="price" value="<%= price %>">
-  <input type="text" name="image" value="<%= image %>">
-  <button>Edit</button>
-</form>
+
+<div class="hero-head">
+    <nav id="navbar" class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <a href="/">
+            <img id="logote" src="/images/Screen Shot 2018-10-30 at 11.39.34.png" href="/" alt="Logo">
+          </a>
+
+          <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroB" class="navbar-menu">
+          <div class="navbar-end">
+            <a id="orange" class="navbar-item" href="/sneakers">
+            My Profile
+            </a>
+
+                <a id="orange" class="navbar-item"href="/logout" > Logout <%= locals.currentUser.username.toUpperCase() %></a>
+
+
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <section id="margin" class="section">
+    <div class="columns">
+      <div class="column is-4 is-offset-4">
+        <h2 class="title is-2">Edit Your Sneakers</h2>
+
+        <form class="" action="/sneakers/<%= _id %>?_method=PUT" method="post">
+  <div class="field">
+    <label class="label">Model</label>
+    <div class="control">
+      <input class="input" name="model" value="<%= model %>" type="text" placeholder="">
+      <%# <span class="icon is-small is-left">
+        <i class="fas fa-envelope"></i>
+      </span> %>
+
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Price</label>
+    <div class="control">
+      <input class="input" name="price" value="<%= price %>" type="number" placeholder="" value="">
+      <%# <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span> %>
+
+    </div>
+  </div>
+  <div class="field">
+    <label class="label">Image URL</label>
+    <div class="control">
+      <input class="input" name="image" value="<%= image %>" type="text" placeholder="" value="">
+      <%# <span class="icon is-small is-left">
+        <i class="fas fa-lock"></i>
+      </span> %>
+
+    </div>
+  </div>
+
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button id="button" class="button is-dark">Edit</button>
+            </div>
+
+
+        </form>
+      </div>
+    </div>

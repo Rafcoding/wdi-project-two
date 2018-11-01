@@ -15,7 +15,9 @@
         </div>
         <div id="navbarMenuHeroB" class="navbar-menu">
           <div class="navbar-end">
-
+            <a id="orange" class="navbar-item" href="/sneakers">
+            My Profile
+            </a>
 
                 <a id="orange" class="navbar-item"href="/logout" > Logout <%= locals.currentUser.username.toUpperCase() %></a>
 
@@ -33,7 +35,7 @@
       <a href="/sneakers/<%= sneaker.id %>">
 
       <img width="400px" height="400px" src=<%= sneaker.image %> alt=<%= sneaker.name %> />
-<h3><%= sneaker.model %><p>£<%= sneaker.price %></p></h3>
+<h3 id="modelling"><%= sneaker.model %><p>£<%= sneaker.price %></p></h3>
       </a>
     </div>
     <% }) %>

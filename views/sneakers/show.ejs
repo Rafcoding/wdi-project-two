@@ -37,13 +37,18 @@
                       <img src="<%= image %>" alt="<%= model %>">
                       <% if (locals.isLoggedIn) { %>
                         <div class="section columns is-mobile">
+
+
+<div id="buttons">
                         <div class="column is-one-fifth">
-                        <a class="button is-rounded" href="/sneakers/<%= _id %>/edit">Edit</a>
+                        <a id="button" class="button is-rounded" href="/sneakers/<%= _id %>/edit">Edit Post</a>
                         </div>
                         <div class="column is-one-fifth">
                         <form action="/sneakers/<%= id %>?_method=DELETE" method="post">
-                        <button class="button is-rounded">Delete</button>
+                        <button id="button" class="button is-rounded">Delete Entry</button>
+
                         </form>
+                        </div>
                         </div>
                         </div>
                   </div>
@@ -51,7 +56,7 @@
                   <div id="mage2" class="column is-4-desktop is-full-mobile has-text-centered ">
                     <h2 class="title is-2"><%= model %></h2>
                     <p id="pricy">Price: £<%= price %></p>
-                    <p id="justificado">Description: <%= description %></p>
+                    <p id="justificado"><strong>Details: </strong><%= description %></p>
                   </div>
 
               </div>
@@ -92,7 +97,7 @@
     <input name='user' value='<%= locals.currentUser.username %>' hidden/>
     </div>
     <div class="field">
-    <label for='rating'>Score (1 to 10) </label>
+    <label for='rating'>Rate: 1 to 10 </label>
     </div>
     <div class="field">
     <input name='rating' type='Number' min='1' max='10'/>
@@ -100,7 +105,7 @@
     </div>
 
     <div class="field">
-    <label for='content'>Something to say... </label>
+    <label for='content'>Review these Sneakers</label>
     <textarea name='content'></textarea>
     </div>
     <div class="field">

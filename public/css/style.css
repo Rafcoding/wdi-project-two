@@ -10,14 +10,14 @@ body {
 
 #body {
 
-line-height: 1.7;
+  line-height: 1.7;
 }
 /* .container {
-  margin: 0;
+margin: 0;
 }
 
 .footercontainer {
-  margin: 0;
+margin: 0;
 } */
 #margin {
   margin-top: 80px;
@@ -46,10 +46,10 @@ section.section {
   background-color: black;
 }
 .new-user{
-      margin-bottom: 25px;
+  margin-bottom: 25px;
 }
 /* .container {
-  background-color: black;
+background-color: black;
 } */
 #orange {
   color: darkorange;
@@ -62,21 +62,23 @@ p {
 }
 #grande {
   margin-top: 10px;
-font-weight: bold;
-color: black;
-font-size: 20px;
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
 }
 #logote {
   height: 45px;
-margin-top: 3px;
-margin-bottom: -4px;
+  margin-top: 3px;
+  margin-bottom: -4px;
 }
 #resize {
   margin-left: 40px;
-margin-top: 40px;
+  margin-top: 40px;
 }
 #justificado {
   text-align: justify;
+  font-weight: 400;
+  font-size: 17px;
 }
 
 #pricy {
@@ -90,16 +92,33 @@ margin-top: 40px;
 
 #mage2 {
   margin-top: -100px;
-margin-left: 20px;
+  margin-left: 20px;
 }
 /* .button  {
-  color: darkorange;
+color: darkorange;
 font-weight: bold;
 background-color: black;
 } */
-
+#button:hover {
+background-color: darkorange;
+color: black;
+}
 #button  {
   color: darkorange;
-font-weight: bold;
-background-color: black;
+  font-weight: bold;
+  background-color: black;
+  font-size: 17px;
+}
+#muevelo {
+  margin-top: 10px;
+}
+#modelling {
+  font-size: 20px;
+}
+#buttons {
+display: inline-flex;
+justify-content: space-around;
+margin-left: 449px;
+margin-top: -30px;
+
 }
