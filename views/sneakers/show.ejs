@@ -54,7 +54,7 @@
                   </div>
 
                   <div id="mage2" class="column is-4-desktop is-full-mobile has-text-centered ">
-                    <h2 class="title is-2"><%= model %></h2>
+                    <h2 id="orange" class="title is-2"><%= model %></h2>
                     <p id="pricy">Price: £<%= price %></p>
                     <p id="justificado"><strong>Details: </strong><%= description %></p>
                   </div>
@@ -65,33 +65,13 @@
 
   </div>
 
-
+<hr id="horz">
 <section class="section">
-<div class="columns is-mobile">
-  <div class="column is-half-desktop is-half-tablet is-half-mobile">
-    <% comments.forEach(comment => { %>
-      <div>
-      <span><strong><%= comment.user.toUpperCase() %></strong></span>
-      </div>
-      <div>
-      <span><%= '😎'.repeat(comment.rating) %></span>
-      </div>
-      <div>
-      <span><%= comment.content %></span>
-      </div>
-
-      <span>
-      <form method="POST" action="/sneakers/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
-      <button class="extra"> ✖︎</button>
-      </form>
-      </span>
-    <% }) %>
-
-    </div>
-    <div class="column is-half-desktop is-half-tablet is-half-mobile">
-    <div class="columns">
-    <div class="column is-4 is-offset-4">
-    <h2 class="title is-2">Reviews</h2>
+<div class="columns  is-vcentered is-mobile is-multiline">
+    <%# <div class="column is-half-desktop is-half-tablet is-half-mobile"> %>
+    <div id="aligned" class="columns">
+    <div class="column is-12 is-offset-4">
+    <h2 class="title is-2">Review these Sneakers!</h2>
     <form action='/sneakers/<%= id %>/comments' method="post">
     <div class="field">
     <input name='user' value='<%= locals.currentUser.username %>' hidden/>
@@ -100,19 +80,45 @@
     <label for='rating'>Rate: 1 to 10 </label>
     </div>
     <div class="field">
-    <input name='rating' type='Number' min='1' max='10'/>
-    <br />
+    <input id="cuadro" name='rating' type='Number' min='1' max='10'/>
+
     </div>
 
     <div class="field">
-    <label for='content'>Review these Sneakers</label>
-    <textarea name='content'></textarea>
-    </div>
+    <label for='content'>wite a Review</label>
+</div>
+    <textarea id="area" name='content'></textarea>
+
     <div class="field">
-    <button>Submit</button>
+    <button id="button1">Submit</button>
     </div>
     </form>
     </div>
     </div>
   <% } %>
+
+  <div id="reviews" class="columns is-mobile">
+    <div class="column is-12-desktop is-full-mobile has-text-centered ">
+      <% comments.forEach(comment => { %>
+        <div id="caja">
+        <div>
+        <span><strong><%= comment.user.toUpperCase() %></strong></span>
+        </div>
+        <div>
+        <span id="orange"><%= '★'.repeat(comment.rating) %></span>
+        </div>
+        <div>
+        <span><%= comment.content %></span>
+        </div>
+        <span>
+        <form id="equix" method="POST" action="/sneakers/<%= _id %>/comments/<%= comment._id %>?_method=DELETE">
+        <button id="extra" class="extra"> ✖︎</button>
+        </form>
+        </span>
+        </div>
+
+
+      <% }) %>
+
+      </div>
 </section>

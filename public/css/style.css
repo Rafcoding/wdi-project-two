@@ -100,14 +100,16 @@ font-weight: bold;
 background-color: black;
 } */
 #button:hover {
-background-color: darkorange;
-color: black;
+  background-color: darkorange;
+  color: black;
 }
 #button  {
   color: darkorange;
   font-weight: bold;
   background-color: black;
   font-size: 17px;
+  border-radius: 6px;
+
 }
 #muevelo {
   margin-top: 10px;
@@ -116,9 +118,63 @@ color: black;
   font-size: 20px;
 }
 #buttons {
-display: inline-flex;
-justify-content: space-around;
-margin-left: 449px;
-margin-top: -30px;
+  display: inline-flex;
+  justify-content: space-around;
+  margin-left: 449px;
+  margin-top: 42px;
 
+}
+#reviews {
+  margin-left: 420px;
+  margin-top: 30px;
+
+}
+#aligned {
+  margin-top: 0px;
+  margin-left: -40px;
+}
+
+#horz {
+  margin-top: -110px;
+}
+#caja {
+  border: 1px solid rgb(204, 204, 204);
+  border-radius: 4px;
+  width: 530px;
+  margin-top: 4px;
+  height: 77px;
+  margin-left: -30px;
+}
+#button1 {
+  width: 99px;
+  height: 41px;
+  color: darkorange;
+  font-weight: bold;
+  background-color: black;
+  font-size: 17px;
+  border-radius: 6px;
+      margin-top: 21px;
+}
+#button1:hover {
+  background-color: darkorange;
+  color: black;
+}
+#equix {
+  margin-right: -500px;
+
+  margin-top: -50px;
+}
+#extra {
+  font-size: 20px;
+}
+#area {
+  width: 200px;
+height: 100px;
+}
+#text {
+  margin-top: -28px;
+}
+#cuadro {
+  width: 56px;
+height: 30px;
 }
