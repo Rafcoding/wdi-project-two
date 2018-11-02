@@ -1,5 +1,3 @@
-
-
 body {
   margin: 0;
   background-color: white;
@@ -12,21 +10,10 @@ body {
 
   line-height: 1.7;
 }
-/* .container {
-margin: 0;
-}
 
-.footercontainer {
-margin: 0;
-} */
 #margin {
   margin-top: 80px;
 }
-/* .container1 {
-background-color: black;
-margin-bottom: -48px;
-height: 56px;
-} */
 
 .hero-foot {
   background-color: black;
@@ -49,12 +36,15 @@ section.section {
 .new-user{
   margin-bottom: 25px;
 }
-/* .container {
-background-color: black;
-} */
+
 #orange {
   color: darkorange;
   font-weight: bold;
+}
+#ghost {
+  color: darkorange;
+  font-weight: bold;
+  font-size: 30px;
 }
 p {
   color: black;
@@ -76,6 +66,7 @@ p {
   margin-left: 60px;
   margin-top: 40px;
 }
+
 #justificado {
   text-align: justify;
   font-weight: 400;
@@ -86,6 +77,7 @@ p {
   margin-bottom: 20px;
   font-size: 20px;
 }
+
 #mage {
   margin-top: 50px;
   margin-left: 10px;
@@ -95,29 +87,28 @@ p {
   margin-top: -100px;
   margin-left: 20px;
 }
-/* .button  {
-color: darkorange;
-font-weight: bold;
-background-color: black;
-} */
+
 #button:hover {
   background-color: darkorange;
   color: black;
 }
+
 #button  {
   color: darkorange;
   font-weight: bold;
   background-color: black;
   font-size: 17px;
   border-radius: 6px;
-
 }
+
 #muevelo {
   margin-top: 10px;
 }
+
 #modelling {
   font-size: 20px;
 }
+
 #buttons {
   display: inline-flex;
   justify-content: space-around;
@@ -138,6 +129,7 @@ background-color: black;
 #horz {
   margin-top: -110px;
 }
+
 #caja {
   border: 1px solid rgb(204, 204, 204);
   border-radius: 4px;
@@ -146,6 +138,7 @@ background-color: black;
   height: 77px;
   margin-left: -33px;
 }
+
 #button1 {
   width: 99px;
   height: 41px;
@@ -156,30 +149,37 @@ background-color: black;
   border-radius: 6px;
   margin-top: 21px;
 }
+
 #button1:hover {
   background-color: darkorange;
   color: black;
 }
+
 #equix {
   margin-right: -427px;
 
   margin-top: -50px;
 }
+
 #extra {
   font-size: 20px;
 }
+
 #area {
   width: 200px;
   height: 100px;
 }
+
 #text {
   margin-top: -28px;
 }
+
 #cuadro {
   width: 56px;
   height: 30px;
   border: 1px solid rgb(204, 204, 204);
 }
+
 #marginado {
-      margin-left: 65px;
+  margin-left: 65px;
 }
