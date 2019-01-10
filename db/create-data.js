@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Sneaker = require('../models/sneaker');
-
-mongoose.connect('mongodb://localhost/all-sneakers');
+const environment = require('./config/environment');
+mongoose.connect(environment.dbUri);
 
 const sneakerData = [
   {
