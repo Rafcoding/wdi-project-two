@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Sneaker = require('../models/sneaker');
-const environment = require('./config/environment');
+const environment = require('../config/environment');
 mongoose.connect(environment.dbUri);
 
 const sneakerData = [
