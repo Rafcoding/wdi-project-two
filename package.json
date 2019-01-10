@@ -9,8 +9,3 @@
     "mongoose": "^5.3.7"
   }
 }
-
-"scripts": {
- "build": "webpack",
- "start": "yarn build && node index"
-}
