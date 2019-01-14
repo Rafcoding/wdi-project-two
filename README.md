@@ -4,7 +4,7 @@
 
 Sneaker Freaker is a blog site for cool and trendy sneakers where users can upload their sneakers and post reviews about them.
 
-it is mandatory to register and login to access to the blog content.
+It is mandatory to register and login to access to the blog content.
 
 This is my second project from General Assembly's Web development course and was done in a week. It was my first project which involved using both front-end and back-end as well as fully RESTful routes. It was an individual project and made me understand the concept of incorporating data into web apps.
 
@@ -40,7 +40,7 @@ Create a web app that meets the following technical requirements:
 
 # Aim of the Blog
 
-The aim of Sneaker Freaker is to create a community where Sneakers lovers can post their latest picks and review them.
+The aim of Sneaker Freaker is to create a community where Sneaker's lovers can post their latest picks and review them.
 
 
 # Styling and Idea
@@ -51,25 +51,25 @@ For the Styling, I picked orange and black as a main colours for the blog site, 
 
 # Screenshots
 
-Intro
+#### Intro
 ![Intro page](public/screenshots/intro.png)
 
-Index page, at then end of this page the user can upload new sneakers.
+#### Index page, at the end of this page the user can upload new sneakers.
 
 ![Intro page](public/screenshots/index.png)
 ![Intro page](public/screenshots/index2.png)
 
-Create page, just as simple as adding model, price and image to create a new product.
+#### Create page, just as simple as adding model, price and image to create a new product.
 
 ![Intro page](public/screenshots/create.png)
 
-Show page, from where it is possible to Edit or Delete posts as well as creating reviews for the products.
+#### Show page, from where it is possible to Edit or Delete posts as well as creating reviews for the products.
 
-All the info about the product is show here.
+#### All the info about the product is shown here.
 
 ![Intro page](public/screenshots/show.png)
 
-Reviews can be added and delete here.
+#### Reviews can be added and delete here.
 
 ![Intro page](public/screenshots/review.png)
 
